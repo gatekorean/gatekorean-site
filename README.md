@@ -14,12 +14,25 @@ the actual lesson. No build step, no framework — plain HTML/CSS.
 Japanese (`/ja`) is deferred to Phase 2.
 
 ## Before going live — fill these in
-Search both `ko/index.html` and `en/index.html` for `EDITME`:
+Search `ko/index.html`, `en/index.html`, `ko/books/index.html`, and
+`en/books/index.html` for `EDITME`:
 1. **Cal.com booking link** — replace `https://cal.com/gatekorean` with your real
    Cal.com event link, once your Cal.com account is set up and connected to Stripe.
 2. **Teacher bio + photo** — replace the placeholder bio text.
-3. **Testimonial** — replace the sample quote once you have a real one.
-4. **Contact email** — `hello@gatekorean.com` in the footer of both pages —
+3. **Formspree endpoint** — sign up at https://formspree.io, create a form, and
+   replace `https://formspree.io/f/EDITME` (in the review form on both index
+   pages) with your real form URL. Submissions are emailed to you — they do
+   **not** appear on the site automatically.
+4. **Reviews** — once you get a review by email that you'd like to feature,
+   copy an `<article class="review">` block in the "What students say" /
+   "수강생 후기" section and fill in the stars, comment, and name.
+5. **Book Shelf entries** — in `ko/books/index.html` and `en/books/index.html`,
+   copy an `<article class="book">` block per book. To use a real cover image,
+   replace the placeholder `<div class="book-cover placeholder-cover">` with
+   `<img class="book-cover" src="/assets/books/your-file.jpg" alt="..."
+   width="100" height="150" loading="lazy">` and drop the image file in
+   `assets/books/`.
+6. **Contact email** — `hello@gatekorean.com` in the footer of both pages —
    update if you're using a different address.
 
 ## Deploy: GitHub + Netlify auto-deploy

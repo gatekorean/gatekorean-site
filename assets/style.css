@@ -40,6 +40,19 @@ header.site .brand {
   color: var(--ink);
 }
 
+.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0.3rem 0.5rem;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  color: var(--ink);
+  font-weight: 700;
+}
+
 .lang-toggle a {
   color: var(--muted);
   text-decoration: none;
@@ -153,4 +166,177 @@ footer.site a {
   color: #92400e;
   border-radius: 4px;
   margin-bottom: 1rem;
+}
+
+/* Reviews */
+
+.reviews {
+  display: grid;
+  gap: 1.5rem;
+  margin: 0 0 1rem;
+}
+
+.review {
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+}
+
+.review-stars {
+  color: var(--accent);
+  letter-spacing: 0.15rem;
+  margin-bottom: 0.3rem;
+}
+
+.review-comment {
+  font-style: italic;
+  margin: 0 0 0.4rem;
+}
+
+.review-name {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.review-form-wrap {
+  margin-top: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0 1rem;
+}
+
+.review-form-wrap summary {
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0.9rem 0;
+}
+
+.review-form {
+  display: grid;
+  gap: 0.9rem;
+  padding-bottom: 1.25rem;
+}
+
+.review-form label {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.review-form input[type="text"],
+.review-form textarea {
+  font: inherit;
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--ink);
+}
+
+.review-form textarea { resize: vertical; }
+
+.review-form .cta {
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  justify-self: start;
+}
+
+.star-rating {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 0.1rem;
+}
+
+.star-rating legend {
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0;
+  margin-bottom: 0.2rem;
+  width: 100%;
+}
+
+.star-rating input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.star-rating label {
+  font-size: 1.7rem;
+  color: var(--line);
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 0.05rem;
+}
+
+.star-rating input:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: var(--accent);
+}
+
+/* Book archive */
+
+.book-list {
+  display: grid;
+  gap: 2rem;
+  margin: 1.5rem 0 3rem;
+}
+
+.book {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.book-cover {
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+  object-fit: cover;
+  background: var(--line);
+}
+
+.book-cover.placeholder-cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--muted);
+  padding: 0.5rem;
+}
+
+.book-title {
+  font-size: 1.05rem;
+  margin: 0 0 0.15rem;
+}
+
+.book-author {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+}
+
+.book-quote {
+  border-left: 3px solid var(--accent);
+  padding-left: 0.85rem;
+  margin: 0 0 0.75rem;
+  font-style: italic;
+  color: var(--ink);
+}
+
+.book-comment {
+  margin: 0;
+  color: var(--muted);
+}
+
+@media (max-width: 480px) {
+  .book { flex-direction: column; }
 }

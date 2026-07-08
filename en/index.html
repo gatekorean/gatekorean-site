@@ -10,6 +10,9 @@
 <body>
 <header class="site">
   <a class="brand" href="/en/">GateKorean</a>
+  <nav class="site-nav">
+    <a href="/en/books/">Books</a>
+  </nav>
   <nav class="lang-toggle">
     <a href="/ko/">KO</a>
     <a href="/en/" class="active">English</a>
@@ -40,8 +43,40 @@
 
     <section>
       <h2>What students say</h2>
-      <div class="placeholder">EDITME: replace with a real testimonial and name once available.</div>
-      <p class="testimonial">"I felt confident having real conversations on my trip to Korea, thanks to these lessons."<cite>— Sample testimonial</cite></p>
+
+      <div class="reviews">
+        <article class="review">
+          <div class="review-stars" aria-hidden="true">★★★★★</div>
+          <p class="review-comment">"I felt confident having real conversations on my trip to Korea, thanks to these lessons."</p>
+          <p class="review-name">— Sample Student</p>
+        </article>
+      </div>
+      <div class="placeholder">EDITME: replace the sample review above with real ones as they arrive by email, and copy the &lt;article class="review"&gt; block to add more.</div>
+
+      <details class="review-form-wrap">
+        <summary>Leave a review</summary>
+        <form class="review-form" action="https://formspree.io/f/EDITME" method="POST">
+          <label for="review-name">Name</label>
+          <input type="text" id="review-name" name="name" required>
+
+          <fieldset class="star-rating">
+            <legend>Rating</legend>
+            <input type="radio" id="star5" name="rating" value="5" required><label for="star5" title="5 stars">★</label>
+            <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 stars">★</label>
+            <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 stars">★</label>
+            <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars">★</label>
+            <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star">★</label>
+          </fieldset>
+
+          <label for="review-comment">Comment</label>
+          <textarea id="review-comment" name="comment" rows="4" required></textarea>
+
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+          <input type="hidden" name="_subject" value="New review — GateKorean">
+
+          <button type="submit" class="cta">Submit review</button>
+        </form>
+      </details>
     </section>
 
     <section>

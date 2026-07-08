@@ -10,6 +10,9 @@
 <body>
 <header class="site">
   <a class="brand" href="/ko/">GateKorean</a>
+  <nav class="site-nav">
+    <a href="/ko/books/">책장</a>
+  </nav>
   <nav class="lang-toggle">
     <a href="/ko/" class="active">한국어</a>
     <a href="/en/">EN</a>
@@ -40,8 +43,40 @@
 
     <section>
       <h2>수강생 후기</h2>
-      <div class="placeholder">EDITME: 실제 후기가 준비되면 아래 예시 문구와 이름을 교체하세요.</div>
-      <p class="testimonial">"선생님 덕분에 한국 여행에서 자신 있게 대화할 수 있었어요."<cite>— 후기 예시</cite></p>
+
+      <div class="reviews">
+        <article class="review">
+          <div class="review-stars" aria-hidden="true">★★★★★</div>
+          <p class="review-comment">"선생님 덕분에 한국 여행에서 자신 있게 대화할 수 있었어요."</p>
+          <p class="review-name">— 후기 예시</p>
+        </article>
+      </div>
+      <div class="placeholder">EDITME: 이메일로 받은 실제 후기가 준비되면 위 예시를 교체하고, &lt;article class="review"&gt; 블록을 복사해 더 추가하세요.</div>
+
+      <details class="review-form-wrap">
+        <summary>후기 작성하기</summary>
+        <form class="review-form" action="https://formspree.io/f/EDITME" method="POST">
+          <label for="review-name">이름</label>
+          <input type="text" id="review-name" name="name" required>
+
+          <fieldset class="star-rating">
+            <legend>평점</legend>
+            <input type="radio" id="star5" name="rating" value="5" required><label for="star5" title="5점">★</label>
+            <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4점">★</label>
+            <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3점">★</label>
+            <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2점">★</label>
+            <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1점">★</label>
+          </fieldset>
+
+          <label for="review-comment">후기 내용</label>
+          <textarea id="review-comment" name="comment" rows="4" required></textarea>
+
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+          <input type="hidden" name="_subject" value="New review — GateKorean">
+
+          <button type="submit" class="cta">후기 제출하기</button>
+        </form>
+      </details>
     </section>
 
     <section>
